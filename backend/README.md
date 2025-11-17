@@ -40,8 +40,6 @@ It supports creating, reading, updating, and deleting to-do items using an in-me
 npm install
 ```
 
-
-
 ### 2. Start the server
 
 ```bash
@@ -163,5 +161,3 @@ curl -X DELETE https://your-dost-assignmentbackend.vercel.app/todos/ID_HERE
 ## 📍 Notes
 
 - Data resets whenever the server restarts (stored only in memory).
-
-````
