@@ -1,7 +1,13 @@
 # 📝 To-Do API (Express.js)
 
-A simple and lightweight REST API built with **Express.js**.
+A simple and lightweight REST API built with **Express.js**.  
 It supports creating, reading, updating, and deleting to-do items using an in-memory list.
+
+---
+
+## 🌐 Live Backend API
+
+👉 **https://your-dost-assignmentbackend.vercel.app/**
 
 ---
 
@@ -34,13 +40,15 @@ It supports creating, reading, updating, and deleting to-do items using an in-me
 npm install
 ```
 
+````
+
 ### 2. Start the server
 
 ```bash
 node index.js
 ```
 
-### 3. Server will run at:
+### 3. Server will run at
 
 ```
 http://localhost:4000
@@ -89,9 +97,9 @@ Create a new to-do.
 
 ### **PUT /todos/:id**
 
-Update a to-do item.
+Update a to-do.
 
-#### Request Body (optional fields):
+#### Sample Body:
 
 ```json
 {
@@ -104,8 +112,8 @@ Update a to-do item.
 
 ### **DELETE /todos/:id**
 
-Deletes a to-do item.
-Returns `204 No Content` on success.
+Deletes a to-do.
+Returns `204 No Content`.
 
 ---
 
@@ -125,13 +133,13 @@ Returns `204 No Content` on success.
 ### Get todos
 
 ```bash
-curl http://localhost:4000/todos
+curl https://your-dost-assignmentbackend.vercel.app/todos
 ```
 
 ### Add todo
 
 ```bash
-curl -X POST http://localhost:4000/todos \
+curl -X POST https://your-dost-assignmentbackend.vercel.app/todos \
      -H "Content-Type: application/json" \
      -d '{"task": "Practice coding"}'
 ```
@@ -139,7 +147,7 @@ curl -X POST http://localhost:4000/todos \
 ### Update todo
 
 ```bash
-curl -X PUT http://localhost:4000/todos/ID_HERE \
+curl -X PUT https://your-dost-assignmentbackend.vercel.app/todos/ID_HERE \
      -H "Content-Type: application/json" \
      -d '{"completed": true}'
 ```
@@ -147,12 +155,13 @@ curl -X PUT http://localhost:4000/todos/ID_HERE \
 ### Delete todo
 
 ```bash
-curl -X DELETE http://localhost:4000/todos/ID_HERE
+curl -X DELETE https://your-dost-assignmentbackend.vercel.app/todos/ID_HERE
 ```
 
 ---
 
 ## 📍 Notes
 
-- Data resets whenever the server restarts (stored in memory only).
-- Ideal for demos, learning APIs, or testing frontend apps.
+- Data resets whenever the server restarts (stored only in memory).
+
+````
