@@ -9,7 +9,7 @@ export const fetchUsers = async (page = 1) => {
     `/users?page=${page}&api_key=${API_KEY}`
   );
 
-  const delayRequest = delay(100);
+  const delayRequest = delay(250);
   const [response] = await Promise.all([apiRequest, delayRequest]);
 
   return response.data;
