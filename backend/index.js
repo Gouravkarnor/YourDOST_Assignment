@@ -35,18 +35,19 @@ app.get("/", (req, res) => {
       },
     },
     exampleUsage: {
-      fetchTodos: "GET http://localhost:4000/todos",
+      fetchTodos: "GET https://your-dost-assignmentbackend.vercel/todos",
       createTodo: {
         method: "POST",
-        url: "http://localhost:4000/todos",
+        url: "https://your-dost-assignmentbackend.vercel/todos",
         body: { task: "Learn Node.js" },
       },
       updateTodo: {
         method: "PUT",
-        url: "http://localhost:4000/todos/<id>",
+        url: "https://your-dost-assignmentbackend.vercel/todos/<id>",
         body: { completed: true },
       },
-      deleteTodo: "DELETE http://localhost:4000/todos/<id>",
+      deleteTodo:
+        "DELETE https://your-dost-assignmentbackend.vercel/todos/<id>",
     },
   });
 });
