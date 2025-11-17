@@ -5,9 +5,51 @@ const { v4: uuidv4 } = require("uuid");
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// Enable CORS and JSON parsing
 app.use(cors());
 app.use(express.json());
+
+// 📌 New: API Description Endpoint
+app.get("/", (req, res) => {
+  res.json({
+    message: "Welcome to the Todo API",
+    description: "A simple REST API to manage todo items.",
+    routes: {
+      GET: {
+        "/": "API description",
+        "/todos": "Get all todos",
+      },
+      POST: {
+        "/todos": {
+          description: "Create a new todo",
+          sampleBody: { task: "Buy groceries" },
+        },
+      },
+      PUT: {
+        "/todos/:id": {
+          description: "Update a todo",
+          sampleBody: { task: "Updated task", completed: true },
+        },
+      },
+      DELETE: {
+        "/todos/:id": "Delete a todo",
+      },
+    },
+    exampleUsage: {
+      fetchTodos: "GET http://localhost:4000/todos",
+      createTodo: {
+        method: "POST",
+        url: "http://localhost:4000/todos",
+        body: { task: "Learn Node.js" },
+      },
+      updateTodo: {
+        method: "PUT",
+        url: "http://localhost:4000/todos/<id>",
+        body: { completed: true },
+      },
+      deleteTodo: "DELETE http://localhost:4000/todos/<id>",
+    },
+  });
+});
 
 // Simple in-memory todo list
 let todos = [
